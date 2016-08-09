@@ -19,7 +19,7 @@
     "social-login"
   ],
   "author": "Soumodip Paul <soumodippaul@gmail.com>",
-  "license": "ISC",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/soumodip/social-media-login/issues"
   },

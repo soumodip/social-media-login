@@ -15,7 +15,7 @@ exports.init=function(data) {
     FACEBOOK_SCOPE=data.SCOPE;
     //PRINT IT IN CONSOLE
     dataFlag=1;
-    console.log("FACEBOOK APP CREDENTIALS HAVE BEEN SAVED.");
+    console.log("--FACEBOOK APP CREDENTIALS HAVE BEEN SAVED--");
 };
 
 //INITIATE THE LOGIN PROCESS

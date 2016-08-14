@@ -15,7 +15,7 @@ exports.init=function(data) {
     LINKEDIN_SCOPE=data.SCOPE;
     //PRINT IT IN CONSOLE
     dataFlag=1;
-    console.log("LINKEDIN APP CREDENTIALS HAVE BEEN SAVED.");
+    console.log("--LINKEDIN APP CREDENTIALS HAVE BEEN SAVED--");
 };
 
 //INITIATE THE LOGIN PROCESS

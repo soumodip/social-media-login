@@ -1,6 +1,6 @@
 {
   "name": "social-media-login",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "description": "This NPM Module provides OAUTH integration with Facebook,Google and Linkedin",
   "main": "server.js",
   "scripts": {

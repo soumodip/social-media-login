@@ -1,10 +1,14 @@
+//INITIALIZE THE NODE MODULES
+let request = require('request');
+let uuid = require("uuid");
+
 //INITIALIZING THE VARIABLE
-var GOOGLE_ID=null;
-var GOOGLE_SECRET=null;
-var GOOGLE_REDIRECT_URI=null;
-var GOOGLE_FAILURE_URI=null;
-var GOOGLE_SCOPE=null;
-var dataFlag=0;
+let GOOGLE_ID=null;
+let GOOGLE_SECRET=null;
+let GOOGLE_REDIRECT_URI=null;
+let GOOGLE_FAILURE_URI=null;
+let GOOGLE_SCOPE=null;
+let dataFlag=0;
 
 //SETTING THE VALUES OF GOOGLE APP
 exports.init=function(data) {
@@ -38,7 +42,7 @@ exports.authenticate=function(req, res, next){
                 res.redirect(GOOGLE_FAILURE_URI);
                 return;
             }
-            var obj=JSON.parse(body);
+            let obj=JSON.parse(body);
             request.get('https://www.googleapis.com/oauth2/v2/userinfo', {
               'auth': {
                 'bearer': obj.access_token
@@ -48,7 +52,7 @@ exports.authenticate=function(req, res, next){
                     res.redirect(GOOGLE_FAILURE_URI);
                     return;
                 }
-                var obj=JSON.parse(body);
+                let obj=JSON.parse(body);
                 req.user=obj;
                 next();
             });

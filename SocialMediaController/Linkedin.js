@@ -1,10 +1,14 @@
+//INITIALIZE THE NODE MODULES
+let request = require('request');
+let uuid = require("uuid");
+
 //INITIALIZING THE VARIABLE
-var LINKEDIN_ID=null;
-var LINKEDIN_SECRET=null;
-var LINKEDIN_REDIRECT_URI=null;
-var LINKEDIN_FAILURE_URI=null;
-var LINKEDIN_SCOPE=null;
-var dataFlag=0;
+let LINKEDIN_ID=null;
+let LINKEDIN_SECRET=null;
+let LINKEDIN_REDIRECT_URI=null;
+let LINKEDIN_FAILURE_URI=null;
+let LINKEDIN_SCOPE=null;
+let dataFlag=0;
 
 //SETTING THE VALUES OF LINKEDIN APP
 exports.init=function(data) {
@@ -21,7 +25,7 @@ exports.init=function(data) {
 //INITIATE THE LOGIN PROCESS
 exports.initLogin=function(req, res){
     	if (dataFlag==1) {
-          var crypto=uuid.v4();
+          let crypto=uuid.v4();
           res.redirect("https://www.linkedin.com/oauth/v2/authorization?response_type=code&client_id="+LINKEDIN_ID+"&redirect_uri="+LINKEDIN_REDIRECT_URI+"&state="+crypto+"&scope="+LINKEDIN_SCOPE+"");
       }else{
     	   res.redirect(LINKEDIN_FAILURE_URI);
@@ -39,7 +43,7 @@ exports.authenticate=function(req, res, next){
             res.redirect(LINKEDIN_FAILURE_URI);
             return;
           }
-          var obj=JSON.parse(body);
+          let obj=JSON.parse(body);
           request.get('https://api.linkedin.com/v1/people/~:(id,headline,first-name,last-name,email-address,picture-url)?format=json', {
           'auth': {
             'bearer': obj.access_token
@@ -49,7 +53,7 @@ exports.authenticate=function(req, res, next){
                   res.redirect(LINKEDIN_FAILURE_URI);
                   return;
                 }
-                var obj=JSON.parse(body);
+                let obj=JSON.parse(body);
                 req.user=obj;
                 next();
         });

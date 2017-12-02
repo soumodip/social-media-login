@@ -42,7 +42,7 @@ app.get('/facebook', socialMediaLogin.initLogin("facebook") );</code>
 		<p>Suppose your NodeJS application is running with Express</p>
 		<pre>
 			<code>
-app.get('/oauth/facebook/callback', 			socialMediaLogin.authenticate("facebook") , function(req,res){
+app.get('/oauth/facebook/callback', socialMediaLogin.authenticate("facebook") , function(req,res){
 	//WRITE YOUR CODE
 });</code>
 		</pre>

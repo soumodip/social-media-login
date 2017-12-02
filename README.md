@@ -58,4 +58,4 @@ app.get('/oauth/facebook/callback', socialMediaLogin.authenticate("facebook") , 
 <p><b><i>google</i></b>: https://www.googleapis.com/auth/userinfo.email</p>
 <p><b><i>linkedin</i></b>: r_basicprofile%20r_emailaddress</p>
 <hr/>
-<p style="width: 100%;text-align: center;">Developed with ❤️ by <a href="http://www.soumodippaul.com/">Soumodip Paul</a></p>
+<center>Developed with ❤️ by <a href="http://www.soumodippaul.com/">Soumodip Paul</a></center>

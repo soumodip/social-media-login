@@ -1,5 +1,4 @@
 <h2><b>social-media-login</b></h2>
-<hr/>
 <p><i style="font-size:18px;"><b>social-media-login</b></i> is a NPM Module which allows developers to  implement OAuth 2 login of 3 major websites ( <i style="font-size:18px;"><b>Google</b></i>, <i style="font-size:18px;"><b>Facebook</b></i> & <i style="font-size:18px;"><b>Linkedin</b></i> ) with just some lines of code</p>
 <hr/>
 <h3><b>Steps</b></h3>
